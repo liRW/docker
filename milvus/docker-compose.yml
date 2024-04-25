@@ -43,7 +43,16 @@ services:
     depends_on:
       - "etcd"
       - "minio"
-
+  # 增加attu容器，注意版本必须是v2.2.2
+  attu:
+    container_name: attu
+    image: zilliz/attu:v2.2.6
+    environment:
+      MILVUS_URL: standalone:19530
+    ports:
+      - "3000:3000"
+    depends_on:
+      - "standalone"
 networks:
   default:
     name: milvus
