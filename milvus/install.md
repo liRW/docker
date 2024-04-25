@@ -17,5 +17,7 @@ docker-compose down /docker-compose up -d
 启动目录的 volumes删除即可
 7.使用
 https://raw.githubusercontent.com/milvus-io/pymilvus/v2.2.8/examples/hello_milvus.py
+https://blog.csdn.net/chy555chy/article/details/134077844
+https://blog.csdn.net/lsb2002/article/details/132222947
 ```
 ![img_1.png](img.png)
