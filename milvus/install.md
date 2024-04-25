@@ -1,9 +1,21 @@
 # windown 安装
+
 ```
 1.下载
 https://github.com/milvus-io/milvus/releases/download/v2.2.11/milvus-standalone-docker-compose.yml
 2.重命名
 下载的文件重命名为 docker-compose.yml
 3.安装
-cmd打开命令窗口，执行指令 docker-compose up -d
+cmd打开命令窗口，执行指令 docker-compose up -d  
+如果没有docker-compose 则先安装pip install docker-compose
+4. 连接到Milvus
+docker port milvus-standalone 19530/tcp
+5 停止/启动Milvus
+docker-compose down /docker-compose up -d
+其他  docker-compose --help 查阅指令
+6.删除数据 
+启动目录的 volumes删除即可
+7.使用
+https://raw.githubusercontent.com/milvus-io/pymilvus/v2.2.8/examples/hello_milvus.py
 ```
+![img_1.png](img.png)
