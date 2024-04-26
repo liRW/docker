@@ -34,5 +34,5 @@ https://blog.csdn.net/lsb2002/article/details/132222947
 
 
 ```
-![img_1.png](img.png)
+![img_1.png](install_sussess.png)
 ![img_1.png](attu.png)

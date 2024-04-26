@@ -19,9 +19,13 @@ services:
     environment:
       MINIO_ACCESS_KEY: minioadmin
       MINIO_SECRET_KEY: minioadmin
-    volumes:
-      - ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/minio:/minio_data
-    command: minio server /minio_data
+    #volumes:
+    #  - ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/minio:/minio_data
+    #command: minio server /minio_data
+    ports:
+      - "9090:9090"
+      - "9000:9000"
+    command: minio server /minio_data --console-address ":9090"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
       interval: 30s
